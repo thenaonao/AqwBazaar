@@ -1,0 +1,15 @@
+
+*.opendb
+ConsoleApplication1/.vs/ConsoleApplication1/v16/Browse.VC.db
+ConsoleApplication1/.vs/ConsoleApplication1/v16/ipch/AutoPCH/7c75f9257a97e30/CONSOLEAPPLICATION1.ipch
+ConsoleApplication1/ConsoleApplication1.sln
+ConsoleApplication1/ConsoleApplication1.vcxproj
+ConsoleApplication1/ConsoleApplication1.vcxproj.user
+ConsoleApplication1/ConsoleApplication1.vcxproj.filters
+*.tlog
+ConsoleApplication1/Debug/AqwBazaar.pdb
+*.idb
+ConsoleApplication1/Debug/AqwBazaar.ilk
+ConsoleApplication1/Debug/vc142.pdb
+ConsoleApplication1/.vs/ConsoleApplication1/v16/.suo
+ConsoleApplication1/Debug/ConsoleApplication1.obj
