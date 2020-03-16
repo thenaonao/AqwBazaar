@@ -7,13 +7,19 @@ int main()
     std::fstream dataReader;
     std::string Output;
     dataReader.open("Data.MF4", std::ios::out | std::ios::in | std::ios::binary);
-
+    //V(ID, X,Y,Z)
+    //T(ID, V1,V2,V3)
     if (dataReader.is_open()) {
+        dataReader << "NAME" << std::endl;
+        dataReader << "AUTHOR" << std::endl;
+        dataReader << " " << std::endl;
+        dataReader << "Vertex:" << std::endl;
         for (int i = 0; i < 64; i++) {
-            dataReader << i << std::endl;
+            dataReader << "v" << i << std::endl;
         }
+        dataReader << "EndVertex" << std::endl;
         dataReader.seekg(0);
-        for (int j = 0; j < 64; j++) {
+        while(dataReader.eof()==0){
             dataReader >> Output;
             std::cout << Output << std::endl;
         }
@@ -24,5 +30,4 @@ int main()
         std::cout << "Error while opening the data" << std::endl;
         return -1;
     }
-    //std::cout << "test" << std::endl;
 }
