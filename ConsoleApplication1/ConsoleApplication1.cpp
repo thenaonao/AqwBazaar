@@ -2,6 +2,11 @@
 #include <fstream>
 #include <string>
 
+
+struct Vertex {
+    int vX,vY,vZ;
+};
+
 int main()
 {
     std::fstream dataReader;
