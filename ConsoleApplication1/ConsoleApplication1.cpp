@@ -10,14 +10,14 @@ int main()
     //V(ID, X,Y,Z)
     //T(ID, V1,V2,V3)
     if (dataReader.is_open()) {
-        dataReader << "NAME" << std::endl;
+        /*dataReader << "NAME" << std::endl;
         dataReader << "AUTHOR" << std::endl;
         dataReader << " " << std::endl;
         dataReader << "Vertex:" << std::endl;
         for (int i = 0; i < 64; i++) {
             dataReader << "v" << i << std::endl;
         }
-        dataReader << "EndVertex" << std::endl;
+        dataReader << "EndVertex" << std::endl;*/
         dataReader.seekg(0);
         while(dataReader.eof()==0){
             dataReader >> Output;
