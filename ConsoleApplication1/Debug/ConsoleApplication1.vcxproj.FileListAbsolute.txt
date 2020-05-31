@@ -1,0 +1,2 @@
+A:\Programmation\AQBazaar\AqwBazaar\ConsoleApplication1\Debug\AqwBazaar.exe
+A:\Programmation\AQBazaar\AqwBazaar\ConsoleApplication1\Debug\AqwBazaar.pdb

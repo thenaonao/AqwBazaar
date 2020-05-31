@@ -2,32 +2,50 @@
 #include <fstream>
 #include <string>
 
+
+struct Vertex {
+    int vX,vY,vZ;
+    int id;
+};
+
 int main()
 {
-    std::fstream dataReader;
+    std::ifstream dataReader;
     std::string Output;
+    std::string OutBuffer;
+    std::string a,b,c;
+    bool isSemiColon = false;
+
     dataReader.open("Data.MF4", std::ios::out | std::ios::in | std::ios::binary);
+
     //V(ID, X,Y,Z)
     //T(ID, V1,V2,V3)
+
     if (dataReader.is_open()) {
-        dataReader << "NAME" << std::endl;
-        dataReader << "AUTHOR" << std::endl;
-        dataReader << " " << std::endl;
-        dataReader << "Vertex:" << std::endl;
-        for (int i = 0; i < 64; i++) {
-            dataReader << "v" << i << std::endl;
-        }
-        dataReader << "EndVertex" << std::endl;
-        dataReader.seekg(0);
-        while(dataReader.eof()==0){
+
+        while(std::getline(dataReader, Output)){
+            if (Output.find(";") != 0) isSemiColon = true;
+
             dataReader >> Output;
             std::cout << Output << std::endl;
+
+
+
+
+            if (!isSemiColon) {
+                OutBuffer += Output;
+            }
+            else{
+                std::cout << OutBuffer << std::endl;
+                OutBuffer = "";
+                isSemiColon = false;
+            }
         }
 
         dataReader.close();
     }
     else {
-        std::cout << "Error while opening the data" << std::endl;
+        std::cout << "Error while opening the map data" << std::endl;
         return -1;
     }
 }
